@@ -105,23 +105,24 @@
             border-radius: 15px;
             background: none;
             z-index: 1;
+            transition: background 0.5s;
         }
         .agent:hover::before {
             background: linear-gradient(45deg,
-                rgba(0, 255, 0, 1),
-                rgba(50, 205, 50, 1),
-                rgba(0, 128, 0, 1),
-                rgba(0, 255, 0, 1)
+                rgba(0, 255, 0, 0.5),
+                rgba(50, 205, 50, 0.5),
+                rgba(0, 128, 0, 0.5),
+                rgba(0, 255, 0, 0.5)
             );
-            background-size: 200% 200%;
-            animation: border-anim 1s linear infinite, pulse 1s infinite;
+            background-size: 300% 300%;
+            animation: border-anim 1s linear infinite;
         }
         @keyframes border-anim {
             0% {
-                background-position: 0% 50%;
+                background-position: 0% 0%;
             }
             100% {
-                background-position: 100% 50%;
+                background-position: 100% 100%;
             }
         }
         /* Animação de pulso */
@@ -217,7 +218,7 @@
             <div class="agent-image"></div>
             <div class="agent-content">
                 <h2>Copy Box</h2>
-                <p class="agent-description">Copy Box oferece é um copy profissional altamente treinado pra praticar escrita persuasiva.</p>
+                <p class="agent-description">Copy Box é um copywriter profissional altamente treinado para escrita persuasiva.</p>
             </div>
         </a>
         <!-- Agente 4 -->
@@ -225,7 +226,7 @@
             <div class="agent-image"></div>
             <div class="agent-content">
                 <h2>Copy Search</h2>
-                <p class="agent-description">Copy Search cria copys automaticas pra rede de pesquisa (literalmente no modelo perfeito).</p>
+                <p class="agent-description">Copy Search cria copys automáticas para a rede de pesquisa no modelo perfeito.</p>
             </div>
         </a>
     </div>
