@@ -44,13 +44,16 @@
         .agent {
             width: 300px;
             margin: 20px;
-            border: 2px solid transparent;
             border-radius: 15px;
             position: relative;
             overflow: hidden;
             color: #fff;
             text-decoration: none;
             cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .agent:hover {
+            transform: scale(1.05);
         }
         .agent-image {
             width: 100%;
@@ -88,7 +91,7 @@
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 5px;
         }
-        /* Animação de borda dourada nos agentes */
+        /* Animação de borda dourada ao passar o mouse */
         .agent::before {
             content: '';
             position: absolute;
@@ -97,6 +100,11 @@
             right: -2px;
             bottom: -2px;
             border-radius: 15px;
+            background: none;
+            z-index: 1;
+            transition: background 0.5s;
+        }
+        .agent:hover::before {
             background: linear-gradient(45deg,
                 rgba(255, 215, 0, 0.8),
                 rgba(218, 165, 32, 0.8),
@@ -104,7 +112,6 @@
                 rgba(255, 215, 0, 0.8)
             );
             background-size: 400% 400%;
-            z-index: 1;
             animation: border-anim 5s linear infinite;
         }
         @keyframes border-anim {
