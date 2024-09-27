@@ -17,9 +17,21 @@
         }
         h1 {
             margin-top: 50px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             font-size: 3em;
             color: #f0c674;
+        }
+        .page-description {
+            font-size: 1.2em;
+            margin: 10px auto;
+            max-width: 800px;
+            color: #ccc;
+        }
+        .divider {
+            width: 80%;
+            height: 2px;
+            background-color: #444;
+            margin: 20px auto;
         }
         .agent-container {
             display: flex;
@@ -36,16 +48,16 @@
             border-radius: 15px;
             position: relative;
             overflow: hidden;
-            background-size: cover;
-            background-position: center;
             color: #fff;
             text-decoration: none;
             cursor: pointer;
         }
-        .agent::before {
-            content: '';
-            display: block;
+        .agent-image {
+            width: 100%;
             padding-top: 100%; /* Mantém a proporção quadrada */
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
         }
         .agent-content {
             position: absolute;
@@ -54,20 +66,30 @@
             right: 0;
             bottom: 0;
             display: flex;
+            flex-direction: column; /* Alinha o conteúdo verticalmente */
             align-items: center;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para legibilidade */
             border-radius: 15px;
+            z-index: 2;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para melhorar a legibilidade */
         }
         .agent h2 {
             font-size: 1.5em;
             margin: 0;
-            padding: 10px 20px;
+            padding: 5px 10px;
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
         }
+        .agent-description {
+            font-size: 1em;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+        }
         /* Animação de borda dourada nos agentes */
-        .agent::after {
+        .agent::before {
             content: '';
             position: absolute;
             top: -2px;
@@ -82,7 +104,7 @@
                 rgba(255, 215, 0, 0.8)
             );
             background-size: 400% 400%;
-            z-index: -1;
+            z-index: 1;
             animation: border-anim 5s linear infinite;
         }
         @keyframes border-anim {
@@ -92,19 +114,6 @@
             100% {
                 background-position: 200% 50%;
             }
-        }
-        /* Imagens de fundo específicas para cada agente */
-        .agent1 {
-            background-image: url('Tester.jpg');
-        }
-        .agent2 {
-            background-image: url('DataSearch.jpg');
-        }
-        .agent3 {
-            background-image: url('CopyBox.jpg');
-        }
-        .agent4 {
-            background-image: url('CopySearch.jpg');
         }
         /* Responsividade para dispositivos móveis */
         @media (max-width: 768px) {
@@ -123,34 +132,74 @@
             h1 {
                 font-size: 2em;
             }
+            .page-description {
+                font-size: 1em;
+                margin: 10px auto;
+                padding: 0 15px;
+            }
             .agent h2 {
                 font-size: 1.2em;
                 padding: 8px 16px;
             }
+            .agent-description {
+                font-size: 0.9em;
+                padding: 5px 10px;
+            }
+            .divider {
+                width: 90%;
+                margin: 15px auto;
+            }
+        }
+        /* Imagens de fundo específicas para cada agente */
+        .agent1 .agent-image {
+            background-image: url('Tester.jpg');
+        }
+        .agent2 .agent-image {
+            background-image: url('DataSearch.jpg');
+        }
+        .agent3 .agent-image {
+            background-image: url('CopyBox.jpg');
+        }
+        .agent4 .agent-image {
+            background-image: url('CopySearch.jpg');
         }
     </style>
 </head>
 <body>
     <h1>Agentes de IA da Camaleão Corp 🤖</h1>
+    <p class="page-description">Aqui você encontra nossos agentes de IA exclusivos para auxiliar em diversas tarefas.</p>
+    <div class="divider"></div>
     <div class="agent-container">
+        <!-- Agente 1 -->
         <a href="https://poe.com/Tester_Youtube" class="agent agent1">
+            <div class="agent-image"></div>
             <div class="agent-content">
                 <h2>Tester</h2>
+                <p class="agent-description">O Agente Tester é especializado em testes de software automatizados.</p>
             </div>
         </a>
+        <!-- Agente 2 -->
         <a href="https://poe.com/Data_Search" class="agent agent2">
+            <div class="agent-image"></div>
             <div class="agent-content">
                 <h2>Data Search</h2>
+                <p class="agent-description">Data Search ajuda na busca e análise de grandes volumes de dados.</p>
             </div>
         </a>
+        <!-- Agente 3 -->
         <a href="https://poe.com/Copy_Box" class="agent agent3">
+            <div class="agent-image"></div>
             <div class="agent-content">
                 <h2>Copy Box</h2>
+                <p class="agent-description">Copy Box oferece soluções inteligentes para criação de conteúdo.</p>
             </div>
         </a>
+        <!-- Agente 4 -->
         <a href="https://poe.com/Copy_Search" class="agent agent4">
+            <div class="agent-image"></div>
             <div class="agent-content">
                 <h2>Copy Search</h2>
+                <p class="agent-description">Copy Search auxilia na otimização de textos para mecanismos de busca.</p>
             </div>
         </a>
     </div>
