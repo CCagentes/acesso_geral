@@ -2,29 +2,32 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Meu Agente</title>
+    <title>Agentes de IA da Camaleão Corp 🤖</title>
     <style>
         body {
-            background-color: #000; /* Fundo preto */
-            background-image: url('seu-caminho-para-imagem.jpg'); /* Imagem de fundo da página */
+            background-color: #1a1a1a; /* Fundo escuro */
+            background-image: url('link-da-sua-imagem-de-fundo.jpg'); /* Imagem de fundo */
             background-size: cover;
             background-position: center;
             color: #fff; /* Texto branco */
             font-family: Arial, sans-serif;
-            text-align: center; /* Centraliza o texto */
+            text-align: center;
             margin: 0;
             padding: 0;
         }
         h1 {
             margin-top: 50px;
+            margin-bottom: 30px;
             font-size: 3em;
+            color: #f0c674; /* Cor dourada para o título */
         }
         .agent-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Centraliza os agentes */
+            justify-content: center;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px; /* Adicionado padding lateral */
         }
         .agent {
             width: 300px;
@@ -32,14 +35,14 @@
             border: 2px solid transparent;
             border-radius: 15px;
             padding: 20px;
-            background-color: rgba(0, 100, 0, 0.8); /* Fundo verde escuro semitransparente */
+            background-color: #333; /* Fundo escuro para os agentes */
             position: relative;
             overflow: hidden;
             background-size: cover;
             background-position: center;
-            color: #fff;
-            text-decoration: none; /* Remove sublinhado se for link */
-            cursor: pointer; /* Indica que é clicável */
+            color: #fff; /* Texto branco */
+            text-decoration: none;
+            cursor: pointer;
         }
         .agent h2 {
             margin-bottom: 20px;
@@ -55,10 +58,10 @@
             bottom: -2px;
             border-radius: 15px;
             background: linear-gradient(45deg,
-                rgba(218, 165, 32, 0.8),
                 rgba(255, 215, 0, 0.8),
+                rgba(218, 165, 32, 0.8),
                 rgba(184, 134, 11, 0.8),
-                rgba(218, 165, 32, 0.8)
+                rgba(255, 215, 0, 0.8)
             );
             background-size: 400% 400%;
             z-index: -1;
@@ -87,36 +90,35 @@
         }
         /* Responsividade para dispositivos móveis */
         @media (max-width: 768px) {
+            body {
+                padding: 0 15px; /* Adicionado padding lateral */
+            }
             .agent-container {
-                flex-direction: column; /* Coloca os agentes em coluna */
-                align-items: center; /* Centraliza os agentes */
+                flex-direction: column;
+                align-items: center;
+                padding: 0; /* Remove o padding lateral no container */
             }
             .agent {
-                width: 90%; /* Aumenta a largura dos agentes para ocupar mais espaço */
-                margin: 10px 0; /* Ajusta as margens */
+                width: 100%; /* Ocupa toda a largura disponível */
+                margin: 10px 0;
+            }
+            h1 {
+                font-size: 2em; /* Diminui o tamanho da fonte no mobile */
             }
         }
     </style>
 </head>
 <body>
-    <h1>Bem-vindo ao Meu Agente</h1>
+    <h1>Agentes de IA da Camaleão Corp 🤖</h1>
     <div class="agent-container">
         <a href="https://poe.com/Tester_Youtube" class="agent agent1">
             <h2>Tester</h2>
-            <!-- Conteúdo adicional se necessário -->
         </a>
         <a href="https://poe.com/Data_Search" class="agent agent2">
             <h2>Data Search</h2>
-            <!-- Conteúdo adicional se necessário -->
         </a>
         <a href="https://poe.com/Copy_Box" class="agent agent3">
             <h2>Copy Box</h2>
-            <!-- Conteúdo adicional se necessário -->
         </a>
         <a href="https://poe.com/Copy_Search" class="agent agent4">
-            <h2>Copy Search</h2>
-            <!-- Conteúdo adicional se necessário -->
-        </a>
-    </div>
-</body>
-</html>
+            <h2
