@@ -27,7 +27,7 @@
             justify-content: center;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px; /* Adicionado padding lateral */
+            padding: 0 20px; /* Padding lateral */
         }
         .agent {
             width: 300px;
@@ -91,19 +91,23 @@
         /* Responsividade para dispositivos móveis */
         @media (max-width: 768px) {
             body {
-                padding: 0 15px; /* Adicionado padding lateral */
+                padding: 0 15px; /* Padding lateral no mobile */
             }
             .agent-container {
                 flex-direction: column;
                 align-items: center;
-                padding: 0; /* Remove o padding lateral no container */
+                padding: 0; /* Remove padding lateral do container */
             }
             .agent {
-                width: 100%; /* Ocupa toda a largura disponível */
-                margin: 10px 0;
+                width: 80%; /* Reduz a largura dos agentes */
+                margin: 15px auto; /* Centraliza os agentes */
+                padding: 15px; /* Reduz o padding */
+            }
+            .agent h2 {
+                font-size: 1.2em; /* Reduz o tamanho da fonte */
             }
             h1 {
-                font-size: 2em; /* Diminui o tamanho da fonte no mobile */
+                font-size: 2em; /* Diminui o tamanho da fonte do título */
             }
         }
     </style>
@@ -121,4 +125,8 @@
             <h2>Copy Box</h2>
         </a>
         <a href="https://poe.com/Copy_Search" class="agent agent4">
-            <h2
+            <h2>Copy Search</h2>
+        </a>
+    </div>
+</body>
+</html>
