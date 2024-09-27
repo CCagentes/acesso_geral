@@ -5,11 +5,11 @@
     <title>Agentes de IA da Camaleão Corp 🤖</title>
     <style>
         body {
-            background-color: #1a1a1a; /* Fundo escuro */
-            background-image: url('link-da-sua-imagem-de-fundo.jpg'); /* Imagem de fundo */
+            background-color: #1a1a1a;
+            background-image: url('link-da-sua-imagem-de-fundo.jpg');
             background-size: cover;
             background-position: center;
-            color: #fff; /* Texto branco */
+            color: #fff;
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
@@ -19,7 +19,7 @@
             margin-top: 50px;
             margin-bottom: 30px;
             font-size: 3em;
-            color: #f0c674; /* Cor dourada para o título */
+            color: #f0c674;
         }
         .agent-container {
             display: flex;
@@ -27,29 +27,47 @@
             justify-content: center;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px; /* Padding lateral */
+            padding: 0 20px;
         }
         .agent {
             width: 300px;
             margin: 20px;
             border: 2px solid transparent;
             border-radius: 15px;
-            padding: 20px;
-            background-color: #333; /* Fundo escuro para os agentes */
             position: relative;
             overflow: hidden;
             background-size: cover;
             background-position: center;
-            color: #fff; /* Texto branco */
+            color: #fff;
             text-decoration: none;
             cursor: pointer;
         }
+        .agent::before {
+            content: '';
+            display: block;
+            padding-top: 100%; /* Mantém a proporção quadrada */
+        }
+        .agent-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para legibilidade */
+            border-radius: 15px;
+        }
         .agent h2 {
-            margin-bottom: 20px;
             font-size: 1.5em;
+            margin: 0;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
         }
         /* Animação de borda dourada nos agentes */
-        .agent::before {
+        .agent::after {
             content: '';
             position: absolute;
             top: -2px;
@@ -77,37 +95,37 @@
         }
         /* Imagens de fundo específicas para cada agente */
         .agent1 {
-            background-image: url('link-da-imagem-agente1.jpg');
+            background-image: url('tester.jpg');
         }
         .agent2 {
-            background-image: url('link-da-imagem-agente2.jpg');
+            background-image: url('DataSearch.jpg');
         }
         .agent3 {
-            background-image: url('link-da-imagem-agente3.jpg');
+            background-image: url('CopyBox.jpg');
         }
         .agent4 {
-            background-image: url('link-da-imagem-agente4.jpg');
+            background-image: url('CopySearch.jpg');
         }
         /* Responsividade para dispositivos móveis */
         @media (max-width: 768px) {
             body {
-                padding: 0 15px; /* Padding lateral no mobile */
+                padding: 0 15px;
             }
             .agent-container {
                 flex-direction: column;
                 align-items: center;
-                padding: 0; /* Remove padding lateral do container */
+                padding: 0;
             }
             .agent {
-                width: 80%; /* Reduz a largura dos agentes */
-                margin: 15px auto; /* Centraliza os agentes */
-                padding: 15px; /* Reduz o padding */
-            }
-            .agent h2 {
-                font-size: 1.2em; /* Reduz o tamanho da fonte */
+                width: 80%;
+                margin: 15px auto;
             }
             h1 {
-                font-size: 2em; /* Diminui o tamanho da fonte do título */
+                font-size: 2em;
+            }
+            .agent h2 {
+                font-size: 1.2em;
+                padding: 8px 16px;
             }
         }
     </style>
@@ -116,16 +134,24 @@
     <h1>Agentes de IA da Camaleão Corp 🤖</h1>
     <div class="agent-container">
         <a href="https://poe.com/Tester_Youtube" class="agent agent1">
-            <h2>Tester</h2>
+            <div class="agent-content">
+                <h2>Tester</h2>
+            </div>
         </a>
         <a href="https://poe.com/Data_Search" class="agent agent2">
-            <h2>Data Search</h2>
+            <div class="agent-content">
+                <h2>Data Search</h2>
+            </div>
         </a>
         <a href="https://poe.com/Copy_Box" class="agent agent3">
-            <h2>Copy Box</h2>
+            <div class="agent-content">
+                <h2>Copy Box</h2>
+            </div>
         </a>
         <a href="https://poe.com/Copy_Search" class="agent agent4">
-            <h2>Copy Search</h2>
+            <div class="agent-content">
+                <h2>Copy Search</h2>
+            </div>
         </a>
     </div>
 </body>
